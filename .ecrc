@@ -1,2 +1,6 @@
-build/
-vendor/
+{
+  "Exclude": [
+    "build",
+    "vendor"
+  ]
+}
