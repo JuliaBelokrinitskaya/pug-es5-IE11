@@ -1,0 +1,29 @@
+@mixin desktop-only {
+  @media (min-width: $width-laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $width-laptop - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (max-width: $width-laptop - 1px) and (min-width: $width-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
